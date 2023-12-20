@@ -13,21 +13,21 @@ def newchaine():
     return chaine
 
 def main():
-    # creation 
-    #f = open('log.txt', 'r+')
-    #chaine = newchaine()
-    #chaine.toJson_v0(f,True)
-    #f.close()
-
-    f = open('log.txt', 'r+')
-    chaine = C_blockchain([])
-    chaine.ReadChaine_json(f)
-    chaine.addBlock(C_block("test22"))
-    #f.close()
-
-    #f = open('log.txt', 'w+')
+    """creation chaine of 20 bloc"""
+    f = open('log.txt', 'w+')
+    chaine = newchaine()
     chaine.toJson_v0(f,True)
     f.close()
+    """ read the chaine bloc and add a new bloc"""
+    # f = open('log.txt', 'a+')
+    # chaine = C_blockchain([])
+    # chaine.ReadChaine_json(f)
+    # chaine.addBlock(C_block("test22"))
+    # f.close()
+    """read the chaine bloc"""
+    # f = open('log.txt', 'r+')
+    # chaine.toJson_v0(f,True)
+    # f.close()
 
 if __name__ == "__main__":
     main()
